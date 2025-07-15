@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  tssc/gitops: go-odpkynlw 
+  janus-idp.io/tekton: go-odpkynlw
+  backstage.io/kubernetes-id: go-odpkynlw
+  backstage.io/kubernetes-namespace: tssc-app 
+  app.kubernetes.io/part-of: go-odpkynlw
+resources:
+  - application-dev.yaml
+  - application-stage.yaml
+  - application-prod.yaml
